@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:quaxly/const/messages.dart';
 import 'package:quaxly/screens/welcome_screen.dart';
 
 import 'screens/login_screen.dart';
@@ -19,12 +20,13 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       title: 'Quaxly',
+      translations: Messages(),
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      locale: const Locale('en', 'US'),
-      home: const LoginScreen(),
+      locale: const Locale('es', 'MX'),
+      home: const WelcomeScreen(),
     );
   }
 }

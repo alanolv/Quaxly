@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:quaxly/widgets/action_button.dart';
 
 class WelcomeScreen extends StatefulWidget {
@@ -44,7 +45,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               ),
             ),
             ActionButton(
-              text: "Log in with your account",
+              text: 'login_with_your_account'.tr,
               onTapFunction: (){},
               leadingIcon: Icons.chevron_right,
             )
