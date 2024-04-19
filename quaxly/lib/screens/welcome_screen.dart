@@ -1,6 +1,8 @@
 import 'dart:ui';
 
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:quaxly/widgets/action_button.dart';
 
@@ -34,8 +36,8 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               ),
             ),
             Transform.translate(
-              offset: Offset(0, -100),
-              child: Container(
+              offset: const Offset(0, -100),
+              child: SizedBox(
                 child: ClipRRect(
                   child: Image.asset(
                     'assets/images/logo.png',
@@ -48,7 +50,41 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               text: 'login_with_your_account'.tr,
               onTapFunction: (){},
               leadingIcon: Icons.chevron_right,
-            )
+            ),
+            Container(
+              alignment: Alignment.center,
+              margin: const EdgeInsets.symmetric(horizontal: 20),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  const SizedBox(
+                    width: 100,
+                    child: Divider()
+                  ),
+                  Container(
+                    alignment: Alignment.center,
+                    margin: const EdgeInsets.symmetric(vertical: 30, horizontal: 10),
+                    child: Text(
+                    'or'.tr,
+                    style: const TextStyle(
+                      color: Color.fromARGB(255, 180, 180, 180),
+                      fontSize: 20,
+                    ),
+                    ),
+                  ),
+                  const SizedBox(
+                    width: 100,
+                    child: Divider()
+                  ),
+                ],
+              ),
+            ),
+            ActionButton(
+              text: 'register'.tr,
+              onTapFunction: (){},
+              leadingIcon: Icons.chevron_right,
+              isFilled: true,
+            ),
           ],
         ),
       ),

@@ -6,10 +6,14 @@ class Messages extends Translations {
         'en_US': {
           'create_your_account': 'Create your account',
           'login_with_your_account': 'Log in with your account',
+          'or' : 'Or',
+          'register' : 'Sign up',
         },
         'es_MX': {
           'create_your_account': 'Crea tu cuenta',
           'login_with_your_account': 'Inicia sesión con tu cuenta',
+          'or' : 'O',
+          'register' : 'Regístrate',
         },
       };
 }
