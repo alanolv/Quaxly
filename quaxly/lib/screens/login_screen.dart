@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class LoginScreen extends StatefulWidget {
   const LoginScreen({super.key});
@@ -24,6 +25,9 @@ class _LoginScreenState extends State<LoginScreen> {
             ),
           ),
           // Text
+          Text(
+            'create_your_account'.tr
+          )
           // Form(
           // Aqui van FormFields
           // )

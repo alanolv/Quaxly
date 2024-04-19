@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quaxly/screens/welcome_screen.dart';
 
+import 'screens/login_screen.dart';
+
 void main() {
 
   WidgetsFlutterBinding.ensureInitialized();
@@ -21,7 +23,8 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const WelcomeScreen(),
+      locale: const Locale('en', 'US'),
+      home: const LoginScreen(),
     );
   }
 }
