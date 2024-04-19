@@ -13,14 +13,21 @@ class _LoginScreenState extends State<LoginScreen> {
     return Scaffold(
       body: ListView(
         children: [
-          ClipRRect(
-            child: Image.asset(
-              'assets/images/logo.png',
-              fit: BoxFit.cover,
-              height: 300,
-              width: double.infinity,
+          Container(
+            width: 160,
+            height: 160,
+            child: ClipRRect(
+              child: Image.asset(
+                'assets/images/logo.png',
+                fit: BoxFit.contain,
+              ),
             ),
           ),
+          // Text
+          // Form(
+          // Aqui van FormFields
+          // )
+
         ],
       ),
     );
