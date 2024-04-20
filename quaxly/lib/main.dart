@@ -27,7 +27,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       locale: const Locale('es', 'MX'),
-      home: const UploadPhoto(),
+      home: const HomeScreen(),
     );
   }
 }

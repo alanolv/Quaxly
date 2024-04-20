@@ -6,6 +6,7 @@ import 'package:quaxly/widgets/title_text.dart';
 import 'package:quaxly/widgets/track_card.dart';
 
 
+
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
 
@@ -96,12 +97,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                       Transform.translate(
                         offset: const Offset(0, -125),
-                        child: TrackCard(
+                        child: const TrackCard(
                         imagePath: 'assets/images/package.png',
                         deliveryId: '123456',
-                        onTapFunction: () {
-                          homeController.watchRouteController;
-                        },
+                        
                       
                       
                       )
