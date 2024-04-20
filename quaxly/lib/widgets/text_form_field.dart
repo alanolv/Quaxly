@@ -25,7 +25,7 @@ class _AppTextFormFieldState extends State<AppTextFormField> {
           labelText: widget.label,
           hintText: widget.hint,
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(50),
+            borderRadius: BorderRadius.circular(10),
           ),
         ),
       ),

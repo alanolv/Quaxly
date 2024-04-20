@@ -11,6 +11,7 @@ class Messages extends Translations {
           'enter_your_name': 'Enter your email',
           'example_email': 'Example@gmail.com',
           'enter_your_password': 'Enter your password',
+          'confirm_password': 'Confirm your password',
         },
         'es_MX': {
           'create_your_account': 'Crea tu cuenta',
@@ -20,6 +21,7 @@ class Messages extends Translations {
           'enter_your_email': 'Ingresa tu correo',
           'example_email': 'Ejemplo@gmail.com',
           'enter_your_password': 'Ingresa tu contraseña',
+          'confirm_password': 'Confirma tu contraseña',
         },
       };
 }
