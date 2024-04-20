@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quaxly/const/messages.dart';
 import 'package:quaxly/screens/home_screen.dart';
+import 'package:quaxly/screens/map_screen.dart';
 import 'package:quaxly/screens/welcome_screen.dart';
 
 void main() {
@@ -29,7 +30,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       locale: const Locale('es', 'MX'),
-      home: const HomeScreen(),
+      home: const MapScreen(),
     );
   }
 }
