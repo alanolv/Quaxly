@@ -1,5 +1,6 @@
 import 'dart:ui';
 
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:quaxly/const/colors.dart';
@@ -97,6 +98,7 @@ class _LoginScreenState extends State<LoginScreen> {
                         Container(
                           margin: const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
                           child: RichText(
+                            textAlign: TextAlign.center,
                             text: TextSpan(
                               children: [
                                 TextSpan(
@@ -112,6 +114,10 @@ class _LoginScreenState extends State<LoginScreen> {
                                     color: primaryColor,
                                     fontSize: 18,
                                   ),
+                                  recognizer: TapGestureRecognizer()
+                                    ..onTap = (){
+                                      Get.back();
+                                    }
                                 ),
                               ],
                             ),

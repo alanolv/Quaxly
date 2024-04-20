@@ -57,7 +57,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     Container(
                       margin: const EdgeInsets.only(top: 50,), //
                       child: AppText(
-                        text: 'register'.tr, 
+                        text: 'create_your_account'.tr, 
                         fontSize: 24, 
                         fontWeight: FontWeight.bold,
                       ),
@@ -90,7 +90,30 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         hasShadow: true,
                       ),
                     ),
-                    
+                    Container(
+                      margin: const EdgeInsets.only(top: 20,),
+                      alignment: Alignment.center,//
+                      child: AppText(
+                        text: 'do_you_have_account'.tr, 
+                        fontSize: 18, 
+                        fontWeight: FontWeight.bold,
+                      ),
+                      
+                    ),
+                    GestureDetector(
+                      onTap: () {
+                        Get.back();
+                      },
+                      child: Container(
+                        margin: const EdgeInsets.only(top: 10),
+                        alignment: Alignment.center,
+                        child: AppText(
+                          text: 'login_with_your_account'.tr, 
+                          fontSize: 16, 
+                          fontWeight: FontWeight.w300,
+                        ),
+                      ),
+                    )
                   ],
                 ),
               ),

@@ -61,14 +61,14 @@ class _HomeScreenState extends State<HomeScreen> {
               Transform.translate(
                 offset: const Offset(60, -160),
                 child: Container(
-                  padding: EdgeInsets.all(4),
-                  decoration: BoxDecoration(
+                  padding:const EdgeInsets.all(4),
+                  decoration:const BoxDecoration(
                     color: Colors.white,
                     shape: BoxShape.circle, // Forma del borde
                   ),
-                  child: Icon(
+                  child:const Icon(
                     Icons.settings,
-                    color: primaryColor,
+                    color: Colors.black,
                     size: 46,
                   )
                 ),
