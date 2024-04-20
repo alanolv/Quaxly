@@ -10,7 +10,6 @@ class TrackCard extends StatefulWidget {
   final String deliveryId;
   final bool isDelivered;
 
-
   const TrackCard(
       {Key? key,
       required this.imagePath,
@@ -46,50 +45,58 @@ class _TrackCardState extends State<TrackCard> {
           height: 200,
           width: 130,
         ),
-        Container(
-          margin: const EdgeInsets.all(10),
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              AppText(
-                text: 'delivery_truck_info'.tr,
-                fontSize: 18,
-                fontWeight: FontWeight.bold,
-              ),
-              AppText(
-                text: 'delivery_id'.tr + widget.deliveryId,
-                fontSize: 16,
-                fontWeight: FontWeight.w400,
-              ),
-              AppText(
-                text: 'current_status'.tr +
-                    (widget.isDelivered ? 'delivered'.tr : 'in_transit'.tr),
-                fontSize: 14,
-                fontWeight: FontWeight.w400,
-              ),
-              Row(
-                children: [
-                  Container(
-                    margin: const EdgeInsets.only(top: 10, left: 10),
-                    child: GestureDetector(
-                      onTap: () {
-                        // Agrega la lógica del evento de toque aquí
-                      },
-                      child: Image.asset(
-                        'assets/images/Route-button.png',
-                        width: 86,
-                        height: 83,
+        Expanded(
+          // Agrega este widget
+          child: Container(
+            margin: const EdgeInsets.all(10),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                AppText(
+                  text: 'delivery_truck_info'.tr,
+                  fontSize: 18,
+                  fontWeight: FontWeight.bold,
+                ),
+                AppText(
+                  text: 'delivery_id'.tr + widget.deliveryId,
+                  fontSize: 16,
+                  fontWeight: FontWeight.w400,
+                ),
+                AppText(
+                  text: 'current_status'.tr +
+                      (widget.isDelivered ? 'delivered'.tr : 'in_transit'.tr),
+                  fontSize: 14,
+                  fontWeight: FontWeight.w400,
+                ),
+                Center(
+                  // Agrega este widget
+                  child: Column(
+                    mainAxisAlignment:
+                        MainAxisAlignment.center, // Centra los hijos de la fila
+                    children: [
+                      Container(
+                        margin: const EdgeInsets.only(top: 10, left: 10),
+                        child: GestureDetector(
+                          onTap: () {
+                            // Agrega la lógica del evento de toque aquí
+                          },
+                          child: Image.asset(
+                            'assets/images/Route-button.png',
+                            width: 86,
+                            height: 83,
+                          ),
+                        ),
                       ),
-                    ),
+                      ActionShortButton(
+                          text: 'deliver'.tr,
+                          onTapFunction: () {
+                            UploadPhoto.showModal(context);
+                          })
+                    ],
                   ),
-                  ActionShortButton(
-                      text: 'deliver'.tr,
-                      onTapFunction: () {
-                        UploadPhoto.showModal(context);
-                      })
-                ],
-              ),
-            ],
+                ),
+              ],
+            ),
           ),
         ),
       ]),

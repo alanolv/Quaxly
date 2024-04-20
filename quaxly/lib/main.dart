@@ -28,7 +28,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       locale: const Locale('es', 'MX'),
-      home: const MapScreen(),
+      home: const HomeScreen(),
     );
   }
 }
