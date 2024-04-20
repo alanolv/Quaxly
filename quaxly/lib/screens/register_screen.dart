@@ -4,6 +4,8 @@ import 'package:quaxly/widgets/text_form_field.dart';
 import 'package:quaxly/widgets/action_button.dart';
 import 'package:get/get.dart';
 import 'package:quaxly/widgets/title_text.dart';
+import 'package:flutter/gestures.dart';
+import 'package:quaxly/const/colors.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -91,29 +93,33 @@ class _RegisterScreenState extends State<RegisterScreen> {
                       ),
                     ),
                     Container(
-                      margin: const EdgeInsets.only(top: 20,),
-                      alignment: Alignment.center,//
-                      child: AppText(
-                        text: 'do_you_have_account'.tr, 
-                        fontSize: 18, 
-                        fontWeight: FontWeight.bold,
-                      ),
-                      
-                    ),
-                    GestureDetector(
-                      onTap: () {
-                        Get.back();
-                      },
-                      child: Container(
-                        margin: const EdgeInsets.only(top: 10),
-                        alignment: Alignment.center,
-                        child: AppText(
-                          text: 'login_with_your_account'.tr, 
-                          fontSize: 16, 
-                          fontWeight: FontWeight.w300,
-                        ),
-                      ),
-                    ),
+                          margin: const EdgeInsets.symmetric(vertical:20, horizontal: 25),
+                          child: RichText(
+                            textAlign: TextAlign.center,
+                            text: TextSpan(
+                              children: [
+                                TextSpan(
+                                  text: 'do_you_have_account'.tr,
+                                  style: const TextStyle(
+                                    color: Color.fromARGB(255, 68, 68, 68),
+                                    fontSize: 18,
+                                  ),
+                                ),
+                                TextSpan(
+                                  text: ' ${'login'.tr}',
+                                  style: const TextStyle(
+                                    color: primaryColor,
+                                    fontSize: 18,
+                                  ),
+                                  recognizer: TapGestureRecognizer()
+                                    ..onTap = (){
+                                      Get.back();
+                                    }
+                                ),
+                              ],
+                            ),
+                          ),
+                        )
                   ],
                 ),
               ),

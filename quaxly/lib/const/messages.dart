@@ -18,6 +18,13 @@ class Messages extends Translations {
           'login' : 'Login',
           'password' : 'Password',
           'dont_have_account': 'Don\'t have an account?',
+          'live_tracking': 'Live Tracking',
+          'delivery_truck_info': 'Delivery truck info',
+          'delivery_id': 'Delivery ID: ',
+          'current_status': 'Current status: ',
+          'delivered': 'Delivered',
+          'in_transit': 'In transit',
+          'deliver':'Deliver',
         },
         'es_MX': {
           'create_your_account': 'Crea tu cuenta',
@@ -34,6 +41,13 @@ class Messages extends Translations {
           'login' : 'Iniciar sesión',
           'password' : 'Contraseña',
           'dont_have_account': '¿No tienes una cuenta?',
+          'live_tracking': 'Seguimiento en vivo',
+          'delivery_truck_info': 'Información de reparto',
+          'delivery_id': 'ID de reparto: ',
+          'current_status': 'Estado actual: ',
+          'delivered': 'Entregado',
+          'in_transit': 'En tránsito',
+          'deliver':'Entregar',
         },
       };
 }
