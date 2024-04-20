@@ -2,12 +2,13 @@ import 'package:flutter/material.dart';
 import 'package:quaxly/const/colors.dart';
 
 class ActionButton extends StatefulWidget {
-  const ActionButton({super.key, required this.text, required this.onTapFunction, this.leadingIcon, this.isFilled = false});
+  const ActionButton({super.key, required this.text, required this.onTapFunction, this.leadingIcon, this.isFilled = false, this.hasShadow = false});
 
   final IconData? leadingIcon;
   final String text;
   final Function() onTapFunction;
   final bool isFilled;
+  final bool hasShadow; 
 
 
   @override
@@ -27,6 +28,14 @@ class _ActionButtonState extends State<ActionButton> {
         ),
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(50),
+          boxShadow: widget.hasShadow ? const [
+            BoxShadow(
+              color: Color.fromARGB(93, 23, 23, 23),
+              blurRadius: 4,
+              spreadRadius: 2,
+              offset: Offset(0, 3)
+            )
+          ] : [],
           border: Border.all(
             width: 2,
             color: primaryColor
