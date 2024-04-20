@@ -1,7 +1,10 @@
 import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:quaxly/controllers/home_controller.dart';
 import 'package:quaxly/widgets/title_text.dart';
+import 'package:quaxly/widgets/track_card.dart';
+
 
 
 class HomeScreen extends StatefulWidget {
@@ -12,6 +15,7 @@ class HomeScreen extends StatefulWidget {
 }
 
 class _HomeScreenState extends State<HomeScreen> {
+  final HomeController homeController = Get.put(HomeController());
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
@@ -58,33 +62,54 @@ class _HomeScreenState extends State<HomeScreen> {
               Transform.translate(
                 offset: const Offset(60, -160),
                 child: Container(
-                  padding:const EdgeInsets.all(4),
-                  decoration:const BoxDecoration(
-                    color: Colors.white,
-                    shape: BoxShape.circle, // Forma del borde
-                  ),
-                  child:const Icon(
-                    Icons.settings,
-                    color: Colors.black,
-                    size: 46,
-                  )
-                ),
+                    padding: const EdgeInsets.all(4),
+                    decoration: const BoxDecoration(
+                      color: Colors.white,
+                      shape: BoxShape.circle, // Forma del borde
+                    ),
+                    child: const Icon(
+                      Icons.settings,
+                      color: Colors.black,
+                      size: 46,
+                    )),
               ),
-              Transform.translate(
-                offset: const Offset(60, -160),
-                child:  Container(
-                      margin: const EdgeInsets.only(top: 0,),
-                      alignment: Alignment.center,//
-                      child: AppText(
-                        text: 'do_you_have_account'.tr, 
-                        fontSize: 18, 
-                        fontWeight: FontWeight.bold,
+              Container(
+                margin: const EdgeInsets.symmetric(horizontal: 20),
+                child: Form(
+                  child: Column(
+                    children: [
+                      Transform.translate(
+                        offset:const Offset(0, -145), // Mover 20 píxeles hacia arriba
+                        child: Align(
+                          alignment: Alignment
+                              .centerLeft, // Alinea el texto a la izquierda
+                          child: Container(
+                            margin: const EdgeInsets.only(
+                              top: 10,
+                            ),
+                            child: AppText(
+                              text: 'live_tracking'.tr,
+                              fontSize: 24,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                        ),
+                      ),
+                      Transform.translate(
+                        offset: const Offset(0, -125),
+                        child: const TrackCard(
+                        imagePath: 'assets/images/package.png',
+                        deliveryId: '123456',
+                        
+                      
+                      
+                      )
                       ),
                       
-                    ),
-                
-                )
-             
+                    ],
+                  ),
+                ),
+              ),
             ],
           ),
         ),
