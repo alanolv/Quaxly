@@ -1,0 +1,1 @@
+const key = "sk.eyJ1Ijoicm9kcmlpdGVwYXR6aSIsImEiOiJjbHY3ZmVoazcwOWVzMmlxazU5MnB1MWZtIn0.iL8DS-1wvg99dvTlikArtQ";

@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
       locale: const Locale('es', 'MX'),
-      home: const WelcomeScreen(),
+      home: const HomeScreen(),
     );
   }
 }
