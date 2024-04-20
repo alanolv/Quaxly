@@ -16,9 +16,11 @@ class ActionButton extends StatefulWidget {
 }
 
 class _ActionButtonState extends State<ActionButton> {
+
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      onTap: widget.onTapFunction,
       child: Container(
         padding: const EdgeInsets.all(20),
         margin: const EdgeInsets.symmetric(
