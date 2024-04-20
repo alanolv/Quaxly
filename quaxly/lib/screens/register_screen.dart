@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get_connect/http/src/utils/utils.dart';
 import 'package:quaxly/controllers/register_controller.dart';
 import 'package:quaxly/widgets/text_form_field.dart';
 import 'package:quaxly/widgets/action_button.dart';

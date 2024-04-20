@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:quaxly/const/colors.dart';
 import 'package:quaxly/controllers/login_controller.dart';
 import 'package:quaxly/widgets/action_button.dart';
 import 'package:quaxly/widgets/text_form_field.dart';
@@ -93,17 +94,27 @@ class _LoginScreenState extends State<LoginScreen> {
                             hasShadow: true,
                           ),
                         ),
-                        RichText(
-                          text: TextSpan(
-                            children: [
-                              TextSpan(
-                                text: ''.tr,
-                                style: const TextStyle(
-                                  color: Color.fromARGB(255, 180, 180, 180),
-                                  fontSize: 20,
+                        Container(
+                          margin: const EdgeInsets.symmetric(vertical: 15, horizontal: 10),
+                          child: RichText(
+                            text: TextSpan(
+                              children: [
+                                TextSpan(
+                                  text: 'dont_have_account'.tr,
+                                  style: const TextStyle(
+                                    color: Color.fromARGB(255, 68, 68, 68),
+                                    fontSize: 18,
+                                  ),
                                 ),
-                              ),
-                            ],
+                                TextSpan(
+                                  text: ' ${'register'.tr}',
+                                  style: const TextStyle(
+                                    color: primaryColor,
+                                    fontSize: 18,
+                                  ),
+                                ),
+                              ],
+                            ),
                           ),
                         )
                       ],
