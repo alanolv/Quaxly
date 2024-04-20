@@ -17,6 +17,7 @@ class Messages extends Translations {
           'email' : 'Email',
           'login' : 'Login',
           'password' : 'Password',
+          'dont_have_account': 'Don\'t have an account?',
         },
         'es_MX': {
           'create_your_account': 'Crea tu cuenta',
@@ -32,6 +33,7 @@ class Messages extends Translations {
           'email' : 'Correo electrónico',
           'login' : 'Iniciar sesión',
           'password' : 'Contraseña',
+          'dont_have_account': '¿No tienes una cuenta?',
         },
       };
 }

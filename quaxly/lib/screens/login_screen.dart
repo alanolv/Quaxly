@@ -1,10 +1,8 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 import 'package:quaxly/controllers/login_controller.dart';
-import 'package:quaxly/screens/register_screen.dart';
 import 'package:quaxly/widgets/action_button.dart';
 import 'package:quaxly/widgets/text_form_field.dart';
 
@@ -67,33 +65,49 @@ class _LoginScreenState extends State<LoginScreen> {
                   ),
                 ),
               ),
-              Form(
-                child: Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 35),
-                  child: Column(
-                    children: [
-                      AppTextFormField(
-                        label: 'email'.tr,
-                        hint: 'enter_your_email'.tr,
-                        controller: loginController.emailController,
-                      ),
-                      AppTextFormField(
-                        label: 'password'.tr,
-                        hint: 'enter_your_password'.tr,
-                        controller: loginController.emailController,
-                      ),
-                      Container(
-                        margin: const EdgeInsets.only(top: 20),
-                        child: ActionButton(
-                          text: 'login'.tr,
-                          onTapFunction: (){
-                            //
-                          },
-                          isFilled: true,
-                          hasShadow: true,
+              Transform.translate(
+                offset: const Offset(0, -50),
+                child: Form(
+                  child: Container(
+                    margin: const EdgeInsets.symmetric(horizontal: 35),
+                    child: Column(
+                      children: [
+                        AppTextFormField(
+                          label: 'email'.tr,
+                          hint: 'enter_your_email'.tr,
+                          controller: loginController.emailController,
                         ),
-                      ),
-                    ],
+                        AppTextFormField(
+                          label: 'password'.tr,
+                          hint: 'enter_your_password'.tr,
+                          controller: loginController.emailController,
+                        ),
+                        Container(
+                          margin: const EdgeInsets.only(top: 20),
+                          child: ActionButton(
+                            text: 'login'.tr,
+                            onTapFunction: (){
+                              //
+                            },
+                            isFilled: true,
+                            hasShadow: true,
+                          ),
+                        ),
+                        RichText(
+                          text: TextSpan(
+                            children: [
+                              TextSpan(
+                                text: ''.tr,
+                                style: const TextStyle(
+                                  color: Color.fromARGB(255, 180, 180, 180),
+                                  fontSize: 20,
+                                ),
+                              ),
+                            ],
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
               )
