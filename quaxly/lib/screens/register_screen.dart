@@ -25,12 +25,23 @@ class _RegisterScreenState extends State<RegisterScreen> {
       
       },
       child: Scaffold(
+        extendBody: true,
+        extendBodyBehindAppBar: true,
+        appBar: AppBar(
+          backgroundColor: Colors.transparent,
+          leading: IconButton(
+            icon: const Icon(Icons.arrow_back),
+            onPressed: () {
+              Get.back();
+            },
+          ),
+        ),
         body: ListView(
           children: [
             Container(
               width: 160,
               height: 200,
-              margin: const EdgeInsets.only(top: 150),
+              margin: const EdgeInsets.only(top: 50),
               child: ClipRRect(
                 child: Image.asset(
                   'assets/images/logo.png',
