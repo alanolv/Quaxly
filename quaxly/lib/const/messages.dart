@@ -12,6 +12,7 @@ class Messages extends Translations {
           'example_email': 'Example@gmail.com',
           'enter_your_password': 'Enter your password',
           'confirm_password': 'Confirm your password',
+          'do_you_have_account': 'Do you have an account?',
         },
         'es_MX': {
           'create_your_account': 'Crea tu cuenta',
@@ -22,6 +23,7 @@ class Messages extends Translations {
           'example_email': 'Ejemplo@gmail.com',
           'enter_your_password': 'Ingresa tu contraseña',
           'confirm_password': 'Confirma tu contraseña',
+          'do_you_have_account': '¿Ya tienes una cuenta?',
         },
       };
 }
