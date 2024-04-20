@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:quaxly/controllers/register_controller.dart';
+import 'package:quaxly/widgets/text_form_field.dart';
 import 'package:get/get.dart';
 
 class RegisterScreen extends StatefulWidget {
@@ -9,6 +11,9 @@ class RegisterScreen extends StatefulWidget {
 }
 
 class _RegisterScreenState extends State<RegisterScreen> {
+  final RegisterController registerController = Get.put(RegisterController());
+
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -40,6 +45,17 @@ class _RegisterScreenState extends State<RegisterScreen> {
                         fontWeight: FontWeight.w500,
                       ),
                     ),
+                  ),
+                  AppTextFormField(
+                    label: 'enter_your_email'.tr,
+                    hint: 'example_email'.tr,
+                    controller: registerController.emailController,
+                  ),
+                  AppTextFormField(
+                    label: 'enter_your_password'.tr,
+                    hint: 'example_password'.tr,
+                    isPassword: true,
+                    controller: registerController.passwordController,
                   ),
                 ],
               ),
