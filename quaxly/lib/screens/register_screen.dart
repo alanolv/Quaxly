@@ -113,7 +113,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                           fontWeight: FontWeight.w300,
                         ),
                       ),
-                    )
+                    ),
                   ],
                 ),
               ),

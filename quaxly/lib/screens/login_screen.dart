@@ -82,15 +82,13 @@ class _LoginScreenState extends State<LoginScreen> {
                         AppTextFormField(
                           label: 'password'.tr,
                           hint: 'enter_your_password'.tr,
-                          controller: loginController.emailController,
+                          controller: loginController.passwordController,
                         ),
                         Container(
                           margin: const EdgeInsets.only(top: 20),
                           child: ActionButton(
                             text: 'login'.tr,
-                            onTapFunction: (){
-                              //
-                            },
+                            onTapFunction: loginController.performLoginAction,
                             isFilled: true,
                             hasShadow: true,
                           ),
