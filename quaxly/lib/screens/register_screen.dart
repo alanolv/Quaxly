@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:quaxly/widgets/title_text.dart';
 
 class RegisterScreen extends StatefulWidget {
   const RegisterScreen({super.key});
@@ -33,12 +34,10 @@ class _RegisterScreenState extends State<RegisterScreen> {
                 children: [
                   Container(
                     margin: const EdgeInsets.only(top: 50,), //
-                    child: Text(
-                      'create_your_account'.tr,
-                      style: const TextStyle(
-                        fontSize: 24,
-                        fontWeight: FontWeight.w500,
-                      ),
+                    child: AppText(
+                      text: 'register'.tr, 
+                      fontSize: 24, 
+                      fontWeight: FontWeight.bold,
                     ),
                   ),
                 ],
