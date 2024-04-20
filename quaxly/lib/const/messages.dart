@@ -10,6 +10,7 @@ class Messages extends Translations {
           'register' : 'Sign up',
           'enter_your_name': 'Enter your email',
           'example_email': 'Example@gmail.com',
+          'enter_your_password': 'Enter your password',
         },
         'es_MX': {
           'create_your_account': 'Crea tu cuenta',
@@ -18,6 +19,7 @@ class Messages extends Translations {
           'register' : 'Regístrate',
           'enter_your_email': 'Ingresa tu correo',
           'example_email': 'Ejemplo@gmail.com',
+          'enter_your_password': 'Ingresa tu contraseña',
         },
       };
 }

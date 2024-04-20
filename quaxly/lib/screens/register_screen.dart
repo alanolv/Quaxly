@@ -53,7 +53,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                   ),
                   AppTextFormField(
                     label: 'enter_your_password'.tr,
-                    hint: 'example_password'.tr,
+                    hint: 'enter_your_password'.tr,
                     isPassword: true,
                     controller: registerController.passwordController,
                   ),
