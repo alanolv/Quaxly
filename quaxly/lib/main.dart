@@ -3,8 +3,6 @@ import 'package:get/get.dart';
 import 'package:quaxly/const/messages.dart';
 import 'package:quaxly/screens/welcome_screen.dart';
 
-import 'screens/register_screen.dart';
-
 void main() {
 
   WidgetsFlutterBinding.ensureInitialized();
@@ -22,11 +20,15 @@ class MyApp extends StatelessWidget {
       title: 'Quaxly',
       translations: Messages(),
       theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Colors.transparent,
+          surfaceTintColor: Colors.transparent
+        ),
+        
         useMaterial3: true,
       ),
       locale: const Locale('es', 'MX'),
-      home: const RegisterScreen(),
+      home: const WelcomeScreen(),
     );
   }
 }

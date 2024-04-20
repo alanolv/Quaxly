@@ -2,6 +2,7 @@ import 'dart:ui';
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:quaxly/screens/login_screen.dart';
 import 'package:quaxly/screens/register_screen.dart';
 import 'package:quaxly/widgets/action_button.dart';
 
@@ -34,7 +35,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 child: BackdropFilter(
                   filter: ImageFilter.blur(sigmaX: 1.0, sigmaY: 1.0), 
                   child: Container(
-                    color: Color.fromARGB(255, 127, 225, 103).withOpacity(0.3)
+                    color: const Color.fromARGB(255, 127, 225, 103).withOpacity(0.3)
                   ),
                 ),
               ),
@@ -51,7 +52,9 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               ),
               ActionButton(
                 text: 'login_with_your_account'.tr,
-                onTapFunction: (){},
+                onTapFunction: (){
+                  Get.to(const LoginScreen());
+                },
                 leadingIcon: Icons.chevron_right,
               ),
               Container(
@@ -85,7 +88,7 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
               ActionButton(
                 text: 'register'.tr,
                 onTapFunction: (){
-                  Get.to(() => RegisterScreen());
+                  Get.to(() => const RegisterScreen());
                 },
                 leadingIcon: Icons.chevron_right,
                 isFilled: true,
