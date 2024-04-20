@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+
 import 'package:quaxly/widgets/title_text.dart';
 import 'package:get/get.dart';
 import 'package:quaxly/widgets/action_button.dart';
@@ -8,13 +8,11 @@ class TrackCard extends StatefulWidget {
   final String imagePath;
   final String deliveryId;
   final bool isDelivered;
-  final Function() onTapFunction;
 
   const TrackCard(
       {Key? key,
       required this.imagePath,
       required this.deliveryId,
-      required this.onTapFunction,
       this.isDelivered = false})
       : super(key: key);
 
@@ -40,9 +38,7 @@ class _TrackCardState extends State<TrackCard> {
           ),
         ],
       ),
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start, 
-        children: [
+      child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
         Image.asset(
           widget.imagePath,
           height: 200,
@@ -69,32 +65,23 @@ class _TrackCardState extends State<TrackCard> {
                 fontSize: 14,
                 fontWeight: FontWeight.w400,
               ),
-              
-            ],
-          ),
-        ),
-        Container(
-          height: 200,
-          width: 130,
-          child: Row(
-            children: [
-              Container(
-                margin: const EdgeInsets.only(top: 15, left: 10),
-                child: GestureDetector(
-                  onTap: () {
-                    // Agrega la lógica del evento de toque aquí
-                  },
-                  child: Image.asset(
-                    'assets/images/Route-button.png',
-                    width: 76,
-                    height: 73,
+              Row(
+                children: [
+                  Container(
+                    margin: const EdgeInsets.only(top: 15, left: 10),
+                    child: GestureDetector(
+                      onTap: () {
+                        // Agrega la lógica del evento de toque aquí
+                      },
+                      child: Image.asset(
+                        'assets/images/Route-button.png',
+                        width: 76,
+                        height: 73,
+                      ),
+                    ),
                   ),
-                ),
+                ],
               ),
-              ActionButton(
-                text: 'deliver'.tr,
-                onTapFunction: widget.onTapFunction,
-              )
             ],
           ),
         ),

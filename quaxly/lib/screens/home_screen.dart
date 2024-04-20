@@ -93,13 +93,10 @@ class _HomeScreenState extends State<HomeScreen> {
                           ),
                         ),
                       ),
-                       TrackCard(
+                       const TrackCard(
                         imagePath: 'assets/images/package.png',
                         deliveryId: '123456',
-                        onTapFunction: (){
-                          
-
-                        },
+                       
                       
                       )
                     ],
