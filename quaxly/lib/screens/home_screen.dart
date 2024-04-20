@@ -1,11 +1,8 @@
 import 'dart:ui';
-
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:quaxly/const/colors.dart';
-import 'package:quaxly/screens/login_screen.dart';
-import 'package:quaxly/screens/register_screen.dart';
-import 'package:quaxly/widgets/action_button.dart';
+import 'package:quaxly/widgets/title_text.dart';
+
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
@@ -73,6 +70,21 @@ class _HomeScreenState extends State<HomeScreen> {
                   )
                 ),
               ),
+              Transform.translate(
+                offset: const Offset(60, -160),
+                child:  Container(
+                      margin: const EdgeInsets.only(top: 0,),
+                      alignment: Alignment.center,//
+                      child: AppText(
+                        text: 'do_you_have_account'.tr, 
+                        fontSize: 18, 
+                        fontWeight: FontWeight.bold,
+                      ),
+                      
+                    ),
+                
+                )
+             
             ],
           ),
         ),
